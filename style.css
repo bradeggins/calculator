@@ -1,0 +1,75 @@
+
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('/digital-7.italic.ttf');
+   }
+
+.calculator-buttons{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+}
+
+.button{
+    height: 15vh;
+    width: 15vw;
+    margin:0;
+    font-size: 5vw;
+    color: white;
+    background-color: darkgrey;
+    border-radius: 10%;
+    
+}
+
+.button-row{
+    margin-left: 4vw;
+}
+
+.control-double{
+    height: 15vh;
+    width: 30vw;
+    padding: 1px 20px;
+    border-radius: 5%;
+    background-color: darkred;
+    
+}
+#display{
+    height:10vh;
+    width: 60vw;
+    text-align: right;
+    font-size: 8vh;
+    background-color: #30bf78;
+    color:black;
+    font-family: 'digital-clock-font';
+    margin-left: 4vw;
+}
+
+.compute{
+    background-color: black;
+}
+
+
+
+h1{
+    font-size: 8vh;
+    margin:0 1vw 1vh 1vw;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.calculator{
+    background-color: lightgrey;
+    width: 75vw;
+    border-style:outset;
+    border-radius: 10%;
+    border-color: lightgrey;
+    border-width: 1vh;
+    margin-bottom: 5vh;
+    position: fixed;
+    justify-content: center;
+}
+
+body{
+    margin: 0;
+}
+
