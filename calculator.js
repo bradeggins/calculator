@@ -8,20 +8,24 @@ var keyedValue = ""
 // Get button value
     // From event listener
     function calculate(){
-        console.log(event)
         var pressedValue = event.target.value;
         // If AC then call allClear
         if(pressedValue === "AC"){
             allClear();
+            displayTotal(total)
         // If CE then call clear
         } else if (pressedValue === "CE"){
             clearEntry();
+            displayTotal(total)
         // If = then replace display with running total 
         } else if (pressedValue === "="){
             calculateTotal()
-            displayTotal()
-
+            displayTotal(total)
+        } else if (pressedValue != NaN){
+            valuesToCalculate.push(pressedValue)
+            displayTotal(pressedValue)
         } 
+    
     }
     
     
@@ -50,22 +54,24 @@ function clearEntry(){
     
 
     
-
 // Store number
     // If button press is a number then store in temp string
     // When another button pressed +-*/ store in array
     
-// Calculate
-    // Loop throug array and calculate using each item
+// Calculate total    
 function calculateTotal(){
-    
+    console.log(valuesToCalculate)
+    var calcString = valuesToCalculate.join(' ');
+    console.log(calcString)
+    total = eval(calcString)
+    console.log(total)
 }
 
 // Display total on LCD screen
-function displayTotal(){
-    var display = document.getElementById("display")
-    display.value = total;
+function displayTotal(inputed){
+    document.getElementById("display").value = inputed
 }
+
 
 
 
