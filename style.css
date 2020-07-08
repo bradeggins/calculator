@@ -5,32 +5,34 @@
    }
 
 .calculator-buttons{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    
+    margin-left: 1vw;
 }
 
 .button{
     height: 15vh;
     width: 15vw;
-    margin:0;
+    margin: 0;
     font-size: 5vw;
     color: white;
     background-color: darkgrey;
     border-radius: 10%;
+    border-width: 5px;
+    margin-bottom: 0.5vh;
     
 }
 
 .button-row{
     margin-left: 4vw;
+    margin-right: 4vw;
 }
 
 .control-double{
     height: 15vh;
     width: 30vw;
-    padding: 1px 20px;
     border-radius: 5%;
     background-color: darkred;
+    margin-right: 0.5vw;
+    
     
 }
 #display{
@@ -42,10 +44,14 @@
     color:black;
     font-family: 'digital-clock-font';
     margin-left: 4vw;
+    margin-bottom: 1vh;
+    border-width: 3px;
+    border-style: inset;
 }
 
 .compute{
     background-color: black;
+    margin-left: 0.5vw;
 }
 
 
@@ -59,7 +65,6 @@ h1{
 
 .calculator{
     background-color: lightgrey;
-    width: 75vw;
     border-style:outset;
     border-radius: 10%;
     border-color: lightgrey;
