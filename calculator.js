@@ -9,7 +9,7 @@ var buttonPress = document.addEventListener('click', calculate);
 
 
 function calculate(){
-    // Get presed value from html and evnet listener
+    // Get presed value from html and event listener
     var pressedValue = event.target.value;
     // If AC then call allClear
     if(pressedValue === "AC"){
@@ -36,11 +36,15 @@ function calculate(){
         // Add operator to array
         valuesToCalculate.push(pressedValue);
         displayTotal(pressedValue);
-    }
-        else if (pressedValue != NaN){
+    } else if (pressedValue != NaN){
+        // Check is pressed value is undefied or null
+        if(pressedValue == null){
+            console.log("Pressed outside a button")
         // Add more than one digit to storage
+        } else {
         keyedValue = keyedValue.concat(pressedValue);
         displayTotal(keyedValue);
+        }
     } 
 
 }
